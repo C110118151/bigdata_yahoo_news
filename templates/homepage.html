@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block title %}首頁{% endblock %}
+
+{% block content %}
+<!-- Hero Image Banner -->
+<div class="hero-section text-white text-center d-flex align-items-center justify-content-center"
+     style="background-image: url('static/images/background.jpg'); height: 60vh; background-size: cover; background-position: center;">
+    <div class="bg-dark bg-opacity-50 w-100 h-100 d-flex flex-column justify-content-center">
+        <h1 class="display-3 fw-bold">大數據分析實務</h1>
+        <p class="lead">C110118151 李若依</p>
+    </div>
+</div>
+
+<div class="container mt-5">
+
+    <!-- Collapse Info -->
+    <div class="mb-4">
+        <h3>📌 功能說明</h3>
+        <div class="accordion" id="infoAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button h2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        🔍 期中考之前的作品
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+                    <div class="accordion-body">
+                        top keyword 熱門關鍵詞分析<hr>
+                        top person 熱門人物排行分析<hr>
+                        user keyword 你的關鍵詞熱門度分析<hr>
+                        user keyword association 自訂全文檢索與關聯分析<hr>
+                        jiang 蔣萬安聲量我最大<hr>
+                        taiwan location 地理位置新聞分析
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed h2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        🧩 期末考的作品 
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#infoAccordion">
+                    <div class="accordion-body">
+                        user keyword sentiment 你關心的關鍵詞的情緒分析<hr>
+                        taiwan pk 台灣都市事故觀測站<hr>
+                        使用資料庫：top person、user keyword<hr>
+                        user keyword llm report 分析你關心的關鍵詞:讓AI幫你自動產生分析報告
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <div class="text-center my-5">
+        <h2 class="fw-light" style="font-style: italic;">Webpage introduction</h2>
+        <p class="mt-3">
+新聞新聞資料主要爬取自 Yahoo 新聞平台的特定標籤專區，這些專區涵蓋了不同類型的事故事件，能夠有效將事件分類並利於後續進行統計與視覺化分析。選擇 Yahoo 平台的原因為其涵蓋新聞來源廣泛、即時性高，且分類清楚，利於資料整理。
+        </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="static\images\Taiwan_travel.jpg" class="card-img-top" alt="分析示意圖1">
+                <div class="card-body">
+                    <h5 class="card-title">台灣 Taiwan</h5>
+                    <p class="card-text">台北、台中、高雄···</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="static\images\car_acc.jpg" class="card-img-top" alt="分析示意圖2">
+                <div class="card-body">
+                    <h5 class="card-title">車禍事故</h5>
+                    <p class="card-text">各類型事故：突發、意外、國道事故</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="static\images\analysis.jpg" class="card-img-top" alt="分析示意圖3">
+                <div class="card-body">
+                    <h5 class="card-title">分析</h5>
+                    <p class="card-text">情緒、熱門度、LLM、觀測站</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
